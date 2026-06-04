@@ -1,6 +1,6 @@
-# Task Management App (MERN)
+# TaskFlow - MERN Task Manager
 
-A clean task manager built with MongoDB, Express, React, and Node. It covers secure authentication, full CRUD for tasks, and a responsive interface with search and status filters.
+A clean and responsive task manager built with MongoDB, Express, React, and Node. It includes secure authentication, smooth CRUD operations, and fast search and filter features.
 
 ## Features
 
@@ -8,7 +8,12 @@ A clean task manager built with MongoDB, Express, React, and Node. It covers sec
 - Create, edit, delete, and toggle tasks
 - Search by title or description
 - Filter by status (pending or completed)
-- Responsive layout with Tailwind CSS
+- Responsive UI with Tailwind CSS
+
+## Bonus Coverage
+
+- Search and filter are implemented
+- Pagination is intentionally not included
 
 ## Tech Stack
 
@@ -16,7 +21,19 @@ A clean task manager built with MongoDB, Express, React, and Node. It covers sec
 - Backend: Node.js, Express, MongoDB, Mongoose
 - Auth: JWT, bcrypt
 
-## Setup
+## Project Structure
+
+```
+client
+server
+```
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- MongoDB (local or Atlas)
 
 ### 1) Server
 
@@ -38,7 +55,8 @@ A clean task manager built with MongoDB, Express, React, and Node. It covers sec
    ```bash
    npm install
    ```
-3. Start the client
+3. Create a `.env` file using `.env.example` as a template
+4. Start the client
    ```bash
    npm run dev
    ```
@@ -60,11 +78,43 @@ Client `.env`
 VITE_API_URL=http://localhost:5000
 ```
 
-## Screenshots or Demo
+## Scripts
 
-Add screenshots or a short demo video link here after running the app.
+Server:
+
+- `npm run dev` - start server with nodemon
+- `npm start` - start server
+
+Client:
+
+- `npm run dev` - start Vite dev server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## API Overview
+
+Base URL: `/api`
+
+Auth:
+
+- `POST /auth/register`
+- `POST /auth/login`
+- `GET /auth/me`
+
+Tasks (protected):
+
+- `GET /tasks?search=&status=`
+- `POST /tasks`
+- `PUT /tasks/:id`
+- `PATCH /tasks/:id/toggle`
+- `DELETE /tasks/:id`
+
+## Screenshots
+
+![Login page](assets/screenshots/login.png)
+![Register page](assets/screenshots/register.png)
+![Dashboard page](assets/screenshots/dashboard.png)
 
 ## Notes
 
-- Pagination is intentionally not included.
-- Search and filter are implemented as requested.
+- Make sure both client and server are running for full functionality.
