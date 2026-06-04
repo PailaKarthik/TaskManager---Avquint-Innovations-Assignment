@@ -111,9 +111,9 @@ Tasks (protected):
 
 ## Screenshots
 
-![Login page](assets/screenshots/login.png)
-![Register page](assets/screenshots/register.png)
-![Dashboard page](assets/screenshots/dashboard.png)
+![Login page](assets/login.png)
+![Register page](assets/register.png)
+![Dashboard page](assets/dashboard.png)
 
 ## Notes
 
